@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+body {
+    font-family: 'Zen Kurenaido', sans-serif;
+}
 * {
     box-sizing: border-box;
 }
@@ -5,6 +10,8 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: black;
+    color: white;
 }
 .page {
     display: flex;
@@ -13,16 +20,19 @@ body {
 .left-pane {
     position: relative;
 }
+.right-pane {
+    background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(0 0 0 / 90%)), url(../images/IrF.gif);
+}
 .pane-img {
     height: 100vh;
-    box-shadow: 0 0 0.5rem 0.3rem black;
+    box-shadow: -0.9rem 0 3rem 0.3rem white
 }
 .logo-text {
 	position: absolute;
 	color: white;
 	font-size: 100px;
 	top: 36%;
-	margin: 0 0 0 38%;
+	margin: 0 0 0 43%;
 	z-index: 1;
 }
 .logo-box {
@@ -43,4 +53,72 @@ body {
     top: 35%;
     z-index: 100;
     filter: invert(1);
+}
+/* .rp-top {
+    box-shadow: 0 -21px 2rem 1.3rem black;
+} */
+.rp-top-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+div.rp-text {
+    padding: 10% 6% 10%;
+    font-size: 1.5rem;
+}
+div.rp-heading {
+    padding: 0% 6%;
+    font-size: 1.5rem;
+}
+.form-fields {
+    display: grid;
+    grid-template-columns: minmax(2rem, 25%) minmax(2rem, 25%);
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2rem 8rem;
+    box-shadow: 0rem 2.1rem 2rem -2.7rem white;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.field-wrapper label {
+    display: block;
+}
+.field-wrapper input {
+    width: 15rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    background-color: #5a5a5a;
+    color: white;
+    border: 0;
+    outline: 0;
+    border-radius: 0.5rem;
+}
+.field-wrapper input:focus {
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 8px 0px white;
+}
+form button {
+    width: 9rem;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color: #5c5c5c;
+    color: white;
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin: 2rem 8rem;
+}
+.error {
+    display: none;
+    color: red;
+    font-size: 1em;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }

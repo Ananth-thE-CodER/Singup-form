@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Form</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./script/form_script.js" defer></script>
 </head>
 
 <body>
@@ -13,12 +14,73 @@
         <div class="left-pane">
             <div class="logo-box-container">
                 <img src="./images/pngwing.com.png" alt="Left pane logo image" class="logo-img">
-                <p class="logo-text">裏通り</p>
+                <p class="logo-text">渋谷</p>
                 <div class="logo-box"></div>
             </div>
             <img src="./images/denys-nevozhai--F3wMFrZ7z0-unsplash.jpg" alt="Left pane image" class="pane-img">
         </div>
-        <div class="right-pane"></div>
+        <div class="right-pane">
+            <div class="rp-container">
+                <div class="rp-top">
+                    <div class="rp-top-container">
+                        <div class="rp-text">
+                            <span class="rp-text">
+                                渋谷は若者のファッションと文化の中心地であり、その街には日本のファッションとエンターテイメントのトレンドが詰まっています。
+                                この地域の大規模ショッピング複合施設の多くは、東急か西武という競合する 2 つの会社のいずれかに属しています。
+                            </span>
+                        </div>
+                        <div class="rp-heading">
+                            <span class="rp-heading">
+                                行って見ましょう 渋谷
+                            </span>
+                        </div>
+                        <div class="rp-fields">
+                            <div class="rp-fields-container">
+                                <form action="/form-submit" method="post" class="signup-form">
+                                    <div class="form-fields">
+                                        <div class="field-wrapper">
+                                            <label for="firstname">FIRST NAME</label>
+                                            <input type="text" name="firstname" id="firstname">
+                                            <span class="f-error error">Please provide a valid firstname</span>
+                                        </div>
+
+                                        <div class="field-wrapper">
+                                            <label for="lastname">LAST NAME</label>
+                                            <input type="text" name="lastname" id="lastname">
+                                        </div>
+
+                                        <div class="field-wrapper">
+                                            <label for="email">EMAIL</label>
+                                            <input type="email" name="email" id="email">
+                                            <span class="mail-error error">Please provide a valid email</span>
+                                        </div>
+
+                                        <div class="field-wrapper">
+                                            <label for="phone">PHONE</label>
+                                            <input type="number" name="phone" id="phone" minlength="8" maxlength="10">
+                                            <span class="phone-error error">Please provide a valid phone number</span>
+                                        </div>
+
+                                        <div class="field-wrapper">
+                                            <label for="pass">PASSWORD</label>
+                                            <input type="password" name="pass" id="pass" required>
+                                            <span class="pass-error error">The passwords do not match</span>
+                                        </div>
+
+                                        <div class="field-wrapper">
+                                            <label for="cpass">CONFIRM PASSWORD</label>
+                                            <input type="password" name="cpass" id="cpass" required>
+                                            <span class="cpass-error error">The passwords do not match</span>
+                                        </div>
+                                    </div>
+                                    <button type="submit">Create Account</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
