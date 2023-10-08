@@ -84,3 +84,15 @@ function checkForError(element) {
 
 }
 
+const theme_btn = document.getElementById("theme_change")
+theme_btn.addEventListener("change", function(e) {
+    if (theme_btn.checked) {
+        const body = document.querySelector("body")
+        body.classList.add("dark-mode")
+    }
+    else {
+        const body = document.querySelector("body")
+        body.classList.remove("dark-mode")
+    }
+})
+

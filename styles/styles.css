@@ -3,9 +3,11 @@
 body {
     font-family: 'Zen Kurenaido', sans-serif;
 }
+
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -13,28 +15,34 @@ body {
     background-color: black;
     color: white;
 }
+
 .page {
     display: flex;
     height: 100vh;
 }
+
 .left-pane {
     position: relative;
 }
+
 .right-pane {
     background-image: linear-gradient(rgb(0 0 0 / 90%), rgb(0 0 0 / 90%)), url(../images/IrF.gif);
 }
+
 .pane-img {
     height: 100vh;
     box-shadow: -0.9rem 0 3rem 0.3rem white
 }
+
 .logo-text {
-	position: absolute;
-	color: white;
-	font-size: 100px;
-	top: 36%;
-	margin: 0 0 0 43%;
-	z-index: 1;
+    position: absolute;
+    color: white;
+    font-size: 100px;
+    top: 36%;
+    margin: 0 0 0 43%;
+    z-index: 1;
 }
+
 .logo-box {
     width: 100%;
     height: 20%;
@@ -46,6 +54,7 @@ body {
     background-position-y: -20rem;
     filter: blur(3px);
 }
+
 .logo-img {
     position: absolute;
     width: 31%;
@@ -54,6 +63,7 @@ body {
     z-index: 100;
     filter: invert(1);
 }
+
 /* .rp-top {
     box-shadow: 0 -21px 2rem 1.3rem black;
 } */
@@ -62,14 +72,17 @@ body {
     flex-direction: column;
     padding-bottom: 5%;
 }
+
 div.rp-text {
     padding: 10% 6% 10%;
     font-size: 1.5rem;
 }
+
 div.rp-heading {
     padding: 0% 6%;
     font-size: 1.5rem;
 }
+
 .form-fields {
     display: grid;
     grid-template-columns: minmax(2rem, 25%) minmax(2rem, 25%);
@@ -79,9 +92,11 @@ div.rp-heading {
     justify-content: flex-start;
     gap: 1rem;
 }
+
 .field-wrapper label {
     display: block;
 }
+
 .field-wrapper input {
     width: 15rem;
     height: 2rem;
@@ -92,11 +107,13 @@ div.rp-heading {
     outline: 0;
     border-radius: 0.5rem;
 }
+
 .field-wrapper input:focus {
     border: 0;
     outline: 0;
     box-shadow: 0 0 8px 0px white;
 }
+
 form button {
     width: 9rem;
     height: 3rem;
@@ -107,11 +124,78 @@ form button {
     font-family: 'Zen Kurenaido', sans-serif;
     margin: 2rem 8rem;
 }
+
 .error {
     display: none;
     color: red;
     font-size: 1em;
 }
+
+/* Toggle Switch */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+    left: 90%;
+    top: 2%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked+.slider {
+    background-color: #B6F5EA;
+}
+
+input:checked+.slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+
+/* DARK MODE */
+body.dark-mode {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+body.dark-mode .right-pane {
+    background-image: none;
+}
+
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -120,5 +204,5 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
 }
