@@ -1,7 +1,7 @@
 const form = document.querySelector(".signup-form");
 
 form.addEventListener("submit", function(e){
-    e.preventDefault();    //stop form from submitting
+    e.preventDefault();                                                              //stop form from submitting
     let valid = true
 
     const fname = this.querySelector("#firstname");

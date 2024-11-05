@@ -85,10 +85,10 @@ div.rp-heading {
 
 .form-fields {
     display: grid;
-    grid-template-columns: minmax(2rem, 25%) minmax(2rem, 25%);
+    grid-template-columns: minmax(2rem, 30%) minmax(2rem, 30%);
     grid-template-rows: 1fr 1fr 1fr;
     padding: 2rem 8rem;
-    box-shadow: 0rem 2.1rem 2rem -2.7rem white;
+    /* box-shadow: 0rem 2.1rem 2rem -2.7rem white; */
     justify-content: flex-start;
     gap: 1rem;
 }
@@ -205,4 +205,14 @@ input[type=number]::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1640px) {
+    .form-fields {
+        grid-template-columns: 1fr;
+    }
+    .field-wrapper input {
+        width: 80%;
+    }
 }
